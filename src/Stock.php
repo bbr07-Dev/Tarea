@@ -1,5 +1,5 @@
 <?php
-    namespace barbara\tarea;
+    namespace barbara\tarea\src;
 
     use PDO;
     use PDOException;
@@ -18,14 +18,14 @@
             $this->producto = $p;
         }
         public function setTienda ($t){
-            $this->tienda -> $t;
+            $this->tienda = $t;
         }
         public function setUnidades ($u){
             $this->unidades = $u;
         }
 
         //Funcion para obtener el numero de unidades que quedan en una tienda
-        function getStock(){
+        function leetStock(){
             $consulta = 'SELECT unidades FROM stocks WHERE producto=:p AND tienda=:t';
             $stmt = $this->conexion->prepare($consulta);
             $stmt->bindParam(':p', $this->producto);

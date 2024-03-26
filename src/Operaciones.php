@@ -2,6 +2,8 @@
     namespace barbara\tarea\src;
     require_once '../src/Conexion.php';
     require_once '../src/Producto.php';
+    require_once '../src/Stock.php';
+    require_once '../src/Familia.php';
     use PDO;
     use PDOException;
 
@@ -27,7 +29,7 @@
         $stock->setProducto($codigoProducto);
         $stock->setTienda($codTienda);
         //Llamamos a la funcion para que nos devuelva la respuesta
-        return $stock->getStock();
+        return $stock->leetStock();
        }
 
        public function getFamilias(){

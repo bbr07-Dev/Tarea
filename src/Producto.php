@@ -55,13 +55,13 @@
         function getProdFamilia (){
             $consulta = 'SELECT id FROM productos WHERE familia=:f';
             $stmt = $this->conexion->prepare($consulta);
-            $stmt->bindParam(':f', $familia);
+            $stmt->bindParam(':f', $this->familia);
             try{
                 $stmt->execute();
             } catch (PDOException $e){
                 die("Error al intentar realizar la consulta, mensaje: " . $e->getMessage());
             }
-            return $stmt;
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
     }
 
