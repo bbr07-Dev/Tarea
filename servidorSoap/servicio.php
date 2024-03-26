@@ -1,5 +1,4 @@
 <?php
-
     require '../src/Operaciones.php';
 
     $uri = 'http://localhost:3000/servidorSoap';
@@ -9,7 +8,7 @@
         $server = new SoapServer(null, array('uri'=>$uri));
 
         //Agregamos la clase operaciones al servidor soap
-        $server->setClass('barbara\tarea\Operaciones');
+        $server->setClass('barbara\tarea\src\Operaciones');
     
         //Manejamos la solicitud del cliente
         $server->handle();

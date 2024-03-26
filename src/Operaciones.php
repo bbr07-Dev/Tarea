@@ -1,6 +1,7 @@
 <?php
-    namespace barbara\tarea;
-    require_once 'Conexion.php';
+    namespace barbara\tarea\src;
+    require_once '../src/Conexion.php';
+    require_once '../src/Producto.php';
     use PDO;
     use PDOException;
 
@@ -16,7 +17,7 @@
         //Le indicamos el ID que recibimos como parametro
         $producto->setId($codigoProducto);
         //Con el ID del objeto ya setteado en la clase llamamos a la funcion
-        return $producto->getPVP();
+        return $producto->leerPVP();
        }
        
        public function getStock ($codigoProducto, $codTienda){

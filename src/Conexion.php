@@ -1,5 +1,5 @@
 <?php
-    namespace barbara\tarea;
+    namespace barbara\tarea\src;
     //Como usamos namespaces es necesaria la utilizacion de estos use para evitar errores
     use PDO;
     use PDOException;
@@ -19,7 +19,7 @@
         $this->dbname = 'tarea6';
         $this->user = 'gestor';
         $this->pass = 'secreto';
-        $this->dsn = "mysql:host={$this->host}; dbname={$this->dbname}; charset=ytf8mb4";
+        $this->dsn = "mysql:host={$this->host}; dbname={$this->dbname}; charset=utf8mb4";
         $this->conexion = $this->crearConexion();
     }
     //Funcion para abrir conexion y capturar el error mediante bloque try-catch

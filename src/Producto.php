@@ -1,6 +1,6 @@
 <?php
 
-    namespace barbara\tarea;
+    namespace barbara\tarea\src;
     
     use PDO;
     use PDOException;
@@ -45,12 +45,10 @@
             try{
                 $stmt->execute();
             } catch (PDOException $e){
-                die("Error al recuperar el producto: " .$e->getNessage());
+                die("Error al recuperar el producto: " .$e->getMessage());
             }
             
-            $respuesta = $stmt->fetchAll(PDO:FETCH_OBJ);
-            $_SESSION['respuesta1'] = $respuesta;
-            return $respuesta;
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
 
         //Funcion para devolver todos los productos de una familia
