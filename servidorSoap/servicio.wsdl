@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost:3000/servidorSoap/servicioW.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="barbara.tarea.src.Operaciones" targetNamespace="http://localhost:3000/servidorSoap/servicioW.php">
+  <types>
+    <xsd:schema targetNamespace="http://localhost:3000/servidorSoap/servicioW.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="barbara.tarea.src.OperacionesPort">
+    <operation name="getPVP">
+      <input message="tns:getPVPIn"/>
+      <output message="tns:getPVPOut"/>
+    </operation>
+    <operation name="getStock">
+      <input message="tns:getStockIn"/>
+      <output message="tns:getStockOut"/>
+    </operation>
+    <operation name="getFamilias">
+      <input message="tns:getFamiliasIn"/>
+      <output message="tns:getFamiliasOut"/>
+    </operation>
+    <operation name="getProductosFamilia">
+      <input message="tns:getProductosFamiliaIn"/>
+      <output message="tns:getProductosFamiliaOut"/>
+    </operation>
+  </portType>
+  <binding name="barbara.tarea.src.OperacionesBinding" type="tns:barbara.tarea.src.OperacionesPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getPVP">
+      <soap:operation soapAction="http://localhost:3000/servidorSoap/servicioW.php#getPVP"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </output>
+    </operation>
+    <operation name="getStock">
+      <soap:operation soapAction="http://localhost:3000/servidorSoap/servicioW.php#getStock"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </output>
+    </operation>
+    <operation name="getFamilias">
+      <soap:operation soapAction="http://localhost:3000/servidorSoap/servicioW.php#getFamilias"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </output>
+    </operation>
+    <operation name="getProductosFamilia">
+      <soap:operation soapAction="http://localhost:3000/servidorSoap/servicioW.php#getProductosFamilia"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:3000/servidorSoap/servicioW.php"/>
+      </output>
+    </operation>
+  </binding>
+  <message name="getPVPIn">
+    <part name="codigoProducto" type="xsd:int"/>
+  </message>
+  <message name="getPVPOut">
+    <part name="return" type="xsd:float"/>
+  </message>
+  <message name="getStockIn">
+    <part name="codigoProducto" type="xsd:int"/>
+    <part name="codTienda" type="xsd:int"/>
+  </message>
+  <message name="getStockOut">
+    <part name="return" type="xsd:int"/>
+  </message>
+  <message name="getFamiliasIn"/>
+  <message name="getFamiliasOut">
+    <part name="return" type="xsd:int"/>
+  </message>
+  <message name="getProductosFamiliaIn">
+    <part name="codFamilia" type="xsd:int"/>
+  </message>
+  <message name="getProductosFamiliaOut">
+    <part name="return" type="xsd:int"/>
+  </message>
+  <service name="barbara.tarea.src.OperacionesService">
+    <port name="barbara.tarea.src.OperacionesPort" binding="tns:barbara.tarea.src.OperacionesBinding">
+      <soap:address location="http://localhost:3000/servidorSoap/servicioW.php"/>
+    </port>
+  </service>
+</definitions>
