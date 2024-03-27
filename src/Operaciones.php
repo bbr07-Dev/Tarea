@@ -13,7 +13,12 @@
             parent::__construct();
         }
 
-       public function getPVP ($codigoProducto){
+        /**
+         * @soap
+         * @param int $codigoProducto
+         * @return float
+         */
+       public function getPVP (int $codigoProducto) :float{
         //Creamos el objeto de la clase producto
         $producto = new Producto();
         //Le indicamos el ID que recibimos como parametro
@@ -21,8 +26,13 @@
         //Con el ID del objeto ya setteado en la clase llamamos a la funcion
         return $producto->leerPVP();
        }
-       
-       public function getStock ($codigoProducto, $codTienda){
+        /**
+         * @soap
+         * @param int $codigoProducto
+         * @param int $codTienda
+         * @return int
+         */       
+       public function getStock (int $codigoProducto, int $codTienda) :int{
         //Creamos obeto de la clase stock
         $stock = new Stock();
         //Setteamos la info para poder llamar a la funcion de su clase
@@ -32,12 +42,21 @@
         return $stock->leetStock();
        }
 
-       public function getFamilias(){
+        /**
+         * @soap
+         * @return int
+         */  
+       public function getFamilias() :int{
         $familia = new Familia();
         return $familia->getCodFamilias();
        }
 
-       public function getProductosFamilia ($codFamilia){
+        /**
+         * @soap
+         * @param int $codFamilia
+         * @return int
+         */   
+       public function getProductosFamilia (int $codFamilia) :int{
         $producto = new Producto();
         $producto->setFamilia($codFamilia);
         return $producto->getProdFamilia();
