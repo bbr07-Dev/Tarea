@@ -24,7 +24,8 @@
         //Le indicamos el ID que recibimos como parametro
         $producto->setId($codigoProducto);
         //Con el ID del objeto ya setteado en la clase llamamos a la funcion
-        return $producto->leerPVP();
+        $resultado = $producto->leerPVP();
+        return $resultado[0]->pvp;
        }
         /**
          * @soap
@@ -39,24 +40,25 @@
         $stock->setProducto($codigoProducto);
         $stock->setTienda($codTienda);
         //Llamamos a la funcion para que nos devuelva la respuesta
-        return $stock->leetStock();
+        $resultado =  $stock->leetStock();
+        return $resultado[0]->unidades;
        }
 
         /**
          * @soap
-         * @return int
+         * @return array
          */  
-       public function getFamilias() :int{
+       public function getFamilias() :array{
         $familia = new Familia();
         return $familia->getCodFamilias();
        }
 
         /**
          * @soap
-         * @param int $codFamilia
-         * @return int
+         * @param string $codFamilia
+         * @return array
          */   
-       public function getProductosFamilia (int $codFamilia) :int{
+       public function getProductosFamilia (string $codFamilia) :array{
         $producto = new Producto();
         $producto->setFamilia($codFamilia);
         return $producto->getProdFamilia();

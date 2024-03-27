@@ -1,5 +1,5 @@
 <?php
-    $url = 'http://localhost:3000/servidorSoap/servicio.php';
+    $url = 'http://localhost:3000/servidorSoap/servicioW.php';
     $uri = 'http://localhost:3000/servidorSoap';
     $paramProducto = ['codProducto'=>1];
 

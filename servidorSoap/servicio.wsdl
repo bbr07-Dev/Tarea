@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost:3000/servidorSoap/servicioW.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="barbara.tarea.src.Operaciones" targetNamespace="http://localhost:3000/servidorSoap/servicioW.php">
   <types>
     <xsd:schema targetNamespace="http://localhost:3000/servidorSoap/servicioW.php">
@@ -77,13 +77,13 @@
   </message>
   <message name="getFamiliasIn"/>
   <message name="getFamiliasOut">
-    <part name="return" type="xsd:int"/>
+    <part name="return" type="soap-enc:Array"/>
   </message>
   <message name="getProductosFamiliaIn">
-    <part name="codFamilia" type="xsd:int"/>
+    <part name="codFamilia" type="xsd:string"/>
   </message>
   <message name="getProductosFamiliaOut">
-    <part name="return" type="xsd:int"/>
+    <part name="return" type="soap-enc:Array"/>
   </message>
   <service name="barbara.tarea.src.OperacionesService">
     <port name="barbara.tarea.src.OperacionesPort" binding="tns:barbara.tarea.src.OperacionesBinding">
