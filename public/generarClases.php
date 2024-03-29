@@ -7,9 +7,9 @@
     $generator = new Generator();
     $generator->generate (
         new Config([
-            'inputFile' => "Barbara\\Tarea\\servidorSoap\\servicios.wsdl",
+            'inputFile' => "http://localhost/xampp/Tarea/servidorSoap/servicio.wsdl",
             'outputDir' => '../src/Clases1',
-            'namespaceName' => 'Clases'
+            'namespaceName' => "Barbara\\Tarea\\"
         ])
     )
 

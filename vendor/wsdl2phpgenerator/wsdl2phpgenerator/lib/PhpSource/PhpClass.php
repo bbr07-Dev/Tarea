@@ -152,8 +152,8 @@ class PhpClass extends PhpElement
         if (strlen($this->extends) > 0) {
             $ret .= ' extends ' . $this->extends;
         }
-
-        if (count($this->implements) > 0) {
+        if (count((is_countable($this->implements)?$this->implements:[])) > 0) {
+        //if (count($this->implements) > 0) {
             $ret .= ' implements ' . implode(', ', $this->implements);
         }
 
