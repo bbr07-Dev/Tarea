@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/servidorSoap/servicioW.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Barbara.Tarea.Operaciones" targetNamespace="http://localhost/servidorSoap/servicioW.php">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/xampp/Tarea/servidorSoap/servicioW.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Barbara.Tarea.Operaciones" targetNamespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php">
   <types>
-    <xsd:schema targetNamespace="http://localhost/servidorSoap/servicioW.php">
+    <xsd:schema targetNamespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php">
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
     </xsd:schema>
   </types>
@@ -26,39 +26,39 @@
   <binding name="Barbara.Tarea.OperacionesBinding" type="tns:Barbara.Tarea.OperacionesPort">
     <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
     <operation name="getPVP">
-      <soap:operation soapAction="http://localhost/servidorSoap/servicioW.php#getPVP"/>
+      <soap:operation soapAction="http://localhost/xampp/Tarea/servidorSoap/servicioW.php#getPVP"/>
       <input>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </input>
       <output>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </output>
     </operation>
     <operation name="getStock">
-      <soap:operation soapAction="http://localhost/servidorSoap/servicioW.php#getStock"/>
+      <soap:operation soapAction="http://localhost/xampp/Tarea/servidorSoap/servicioW.php#getStock"/>
       <input>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </input>
       <output>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </output>
     </operation>
     <operation name="getFamilias">
-      <soap:operation soapAction="http://localhost/servidorSoap/servicioW.php#getFamilias"/>
+      <soap:operation soapAction="http://localhost/xampp/Tarea/servidorSoap/servicioW.php#getFamilias"/>
       <input>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </input>
       <output>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </output>
     </operation>
     <operation name="getProductosFamilia">
-      <soap:operation soapAction="http://localhost/servidorSoap/servicioW.php#getProductosFamilia"/>
+      <soap:operation soapAction="http://localhost/xampp/Tarea/servidorSoap/servicioW.php#getProductosFamilia"/>
       <input>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </input>
       <output>
-        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/servidorSoap/servicioW.php"/>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
       </output>
     </operation>
   </binding>
@@ -87,7 +87,7 @@
   </message>
   <service name="Barbara.Tarea.OperacionesService">
     <port name="Barbara.Tarea.OperacionesPort" binding="tns:Barbara.Tarea.OperacionesBinding">
-      <soap:address location="http://localhost/servidorSoap/servicioW.php"/>
+      <soap:address location="http://localhost/xampp/Tarea/servidorSoap/servicioW.php"/>
     </port>
   </service>
 </definitions>

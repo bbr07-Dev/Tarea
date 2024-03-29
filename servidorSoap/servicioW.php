@@ -1,4 +1,5 @@
 <?php
+    require '../vendor/autoload.php';
     require '../src/Operaciones.php';
 
     $url = 'http://localhost/xampp/Tarea/servidorSoap/servicio.wsdl';

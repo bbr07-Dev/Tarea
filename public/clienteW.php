@@ -35,4 +35,5 @@
     for($j = 0 ; $j <= count($productosFamilia) - 1 ; $j++){
         echo "\n" . $productosFamilia[$j]->id;
     }
+
 ?>
