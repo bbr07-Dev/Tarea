@@ -1,11 +1,11 @@
 <?php
-    $url = 'http://localhost:3000/servidorSoap/servicioW.php';
-    $uri = 'http://localhost:3000/servidorSoap';
+    $url = 'http://localhost/xampp/Tarea/servidorSoap/servicio.wsdl';
     $paramProducto = ['codProducto'=>1];
 
     try {
+        ini_set("soap.wsdl_cache_enabled", "0");
         //Cremos objeto cliente
-        $cliente = new SoapClient(null, ['location'=>$url, 'uri'=>$uri, 'trace'=>true]);
+        $cliente = new SoapClient($url);
     } catch (SoapFault $e){
         echo "Error, mensaje: " . $e->getMessage();
     }

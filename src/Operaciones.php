@@ -1,9 +1,18 @@
 <?php
-    namespace barbara\tarea\src;
-    require_once '../src/Conexion.php';
-    require_once '../src/Producto.php';
-    require_once '../src/Stock.php';
-    require_once '../src/Familia.php';
+    namespace Barbara\Tarea;
+    // require_once '../src/Conexion.php';
+    // require_once '../src/Producto.php';
+    // require_once '../src/Stock.php';
+    // require_once '../src/Familia.php';
+
+    spl_autoload_register(function ($class){
+      $classPath = str_replace("\\", "/", $class);
+      // Eliminar el namespace Barbara\Tarea de la cadena $class
+      $classPath = str_replace("Barbara/Tarea/", "", $classPath);
+      $rootDir = dirname(__DIR__);
+      require $rootDir . "/src/" . $classPath . ".php";
+  });
+
     use PDO;
     use PDOException;
 
@@ -25,6 +34,7 @@
         $producto->setId($codigoProducto);
         //Con el ID del objeto ya setteado en la clase llamamos a la funcion
         $resultado = $producto->leerPVP();
+
         return $resultado[0]->pvp;
        }
         /**

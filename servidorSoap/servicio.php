@@ -1,14 +1,14 @@
 <?php
     require '../src/Operaciones.php';
 
-    $uri = 'http://localhost:3000/servidorSoap';
+    $uri = 'http://localhost/servidorSoap';
 
     try {
     //Creamos un objeto SOAPSERVER sin WSDL
         $server = new SoapServer(null, array('uri'=>$uri));
 
         //Agregamos la clase operaciones al servidor soap
-        $server->setClass('barbara\tarea\src\Operaciones');
+        $server->setClass("Barbara\\Tarea\\Operaciones");
     
         //Manejamos la solicitud del cliente
         $server->handle();
@@ -19,6 +19,6 @@
 
     }
 
-    echo "Servicio disponible...";
+    // echo "Servicio disponible...";
 
 ?>

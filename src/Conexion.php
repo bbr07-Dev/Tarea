@@ -1,5 +1,5 @@
 <?php
-    namespace barbara\tarea\src;
+    namespace Barbara\Tarea;
     //Como usamos namespaces es necesaria la utilizacion de estos use para evitar errores
     use PDO;
     use PDOException;

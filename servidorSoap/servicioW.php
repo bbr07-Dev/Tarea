@@ -1,14 +1,15 @@
 <?php
     require '../src/Operaciones.php';
 
-    $uri = 'http://localhost:3000/servidorSoap';
+    $url = 'http://localhost/xampp/Tarea/servidorSoap/servicio.wsdl';
 
     try {
+        ini_set("soap.wsdl_cache_enabled", "0");
     //Creamos un objeto SOAPSERVER sin WSDL
-        $server = new SoapServer(null, array('uri'=>$uri));
+        $server = new SoapServer($url);
 
         //Agregamos la clase operaciones al servidor soap
-        $server->setClass('barbara\tarea\src\Operaciones');
+        $server->setClass('Barbara\\Tarea\\Operaciones');
     
         //Manejamos la solicitud del cliente
         $server->handle();
@@ -19,6 +20,6 @@
 
     }
 
-    echo "Servicio disponible...";
+    // echo "Servicio disponible...";
 
 ?>

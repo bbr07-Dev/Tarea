@@ -1,5 +1,5 @@
 <?php
-    namespace barbara\tarea\src;
+    namespace Barbara\Tarea;
 
     use PDO;
     use PDOException;
