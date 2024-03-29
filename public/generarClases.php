@@ -9,7 +9,7 @@
         new Config([
             'inputFile' => "http://localhost/xampp/Tarea/servidorSoap/servicio.wsdl",
             'outputDir' => '../src/Clases1',
-            'namespaceName' => "Barbara\\Tarea\\"
+            'namespaceName' => "Barbara\\Tarea\\Clases1"
         ])
     )
 

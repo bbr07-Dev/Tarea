@@ -1,6 +1,6 @@
 <?php
 
-namespace Barbara\Tarea\;
+namespace Barbara\Tarea\Clases1;
 
 class BarbaraTareaOperacionesService extends \SoapClient
 {
